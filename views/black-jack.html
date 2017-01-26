@@ -1,0 +1,65 @@
+<!-- <div id="banner">
+    <div id="wrapper" style="width:100%; overflow:hidden;">
+        <div id="container" style="width:100%; margin:auto;">
+                <a ui-sref="black-jack"><img style="width: 1360px; height: 150px;" src="img/blackjack-banner.jpg" alt="Black Jack Banner"/></a>
+        </div>
+    </div>
+</div> -->
+
+	<!-- <img  width="1300px", height="400px"> -->
+
+	<!-- <h3 class="text-center"> Let the Games Begin! </h3> -->
+	<h5>Let the Games Begin!</h5>
+	<h1>BLACK JACK</h1>
+	
+	<div class="text-center">
+		{{test}}
+	</div>
+
+
+	<div class="col-md-12">
+		<div class="row col-md-6 center" ng-if="message">
+			 <h4>{{message}}</h4>	<!--class="alert alert-success" -->
+		</div>
+	</div>
+
+	<div class="row col-md-12"> 
+		<br><br>
+		<div class="col-md-1 col-md-offset-4 card-box" ng-if="myDeal">
+			<label class="pull-left card-content">{{myCard}}</label>
+			<br><br><br>
+			<h3 class="text-center card-content">{{myCard}}</h3>
+			<br><br>
+			<label class="pull-right card-content">{{myCard}}</label>
+		</div>
+
+		<div class="col-md-1 col-md-offset-2 card-box-dealer card-content" ng-if="dealerDeal">
+			<label class="pull-left card-content">{{dealerCard}}</label>
+			<br><br><br>
+			<h3 class="text-center card-content">{{dealerCard}}</h3>
+			<br><br>
+			<label class="pull-right card-content">{{dealerCard}}</label>
+		</div>
+		<br><br><br><br>
+	</div>
+
+	<!-- <div class="row text-center">
+		<label> My Score: </label> {{my_score}}
+		<label>Dealer Score: </label> {{dealer_score}}
+	</div> -->
+	<div class="intro-position">
+		<span>My Score: <label>{{my_score}}</label></span>
+		<span>Dealer Score: <label>{{dealer_score}}</label></span>
+	</div>
+
+	<br><br>
+
+	<div class="text-center">
+		<a href="" class="btn btn-lg btn-success" ng-click="deal()" 
+		ng-disabled="dealDisable">Deal</a>
+		<a href="" class="btn btn-lg btn-info" ng-click="hit(my_score, dealer_score)" 
+		ng-disabled="hitDisable">Hit</a>
+		<a href="" class="btn btn-lg btn-danger" ng-click="stand(my_score, dealer_score)">Stand</a>
+	</div>
+	
+<!-- </div> -->
